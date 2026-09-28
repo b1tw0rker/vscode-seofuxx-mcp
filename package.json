@@ -1,0 +1,95 @@
+{
+  "name": "seofuxx-mcp",
+  "displayName": "SEOFuxx MCP – SEO Audit for Copilot",
+  "description": "SEO analyses and prioritized on-page recommendations from your SEOFuxx account, right inside GitHub Copilot Chat (MCP server).",
+  "version": "0.1.0",
+  "publisher": "BITWORKER",
+  "license": "MIT",
+  "icon": "images/seofuxx-256.png",
+  "galleryBanner": {
+    "color": "#1a0b2e",
+    "theme": "dark"
+  },
+  "homepage": "https://www.seofuxx.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b1tw0rker/vscode-seofuxx-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/b1tw0rker/vscode-seofuxx-mcp/issues"
+  },
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "keywords": [
+    "mcp",
+    "model context protocol",
+    "seo",
+    "seofuxx",
+    "copilot"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "seofuxx",
+        "label": "SEOFuxx"
+      }
+    ],
+    "commands": [
+      {
+        "command": "seofuxx.setApiKey",
+        "title": "Set API Key",
+        "category": "SEOFuxx"
+      },
+      {
+        "command": "seofuxx.testConnection",
+        "title": "Test Connection",
+        "category": "SEOFuxx"
+      },
+      {
+        "command": "seofuxx.clearApiKey",
+        "title": "Remove API Key",
+        "category": "SEOFuxx"
+      },
+      {
+        "command": "seofuxx.openApiKeys",
+        "title": "Create API Key (opens seofuxx.com)",
+        "category": "SEOFuxx"
+      }
+    ],
+    "configuration": {
+      "title": "SEOFuxx",
+      "properties": {
+        "seofuxx.endpoint": {
+          "type": "string",
+          "default": "https://www.seofuxx.com/api/v1/mcp",
+          "pattern": "^https://",
+          "markdownDescription": "SEOFuxx MCP endpoint. Only change this for testing. Must start with `https://`."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc --noEmit && esbuild src/extension.ts --bundle --platform=node --format=cjs --target=node20 --external:vscode --minify --outfile=dist/extension.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/vscode": "1.101.0",
+    "@vscode/vsce": "^4.0.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}
