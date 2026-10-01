@@ -9,7 +9,7 @@ prioritized on-page recommendations of your latest SEO audits – and fix them r
 - **Zero config** – no `mcp.json` editing. Install, paste your API key, done.
 - **Secure** – your API key is stored in VS Code's Secret Storage (OS keychain), never in settings or workspace files.
 - **Always up to date** – the server runs at seofuxx.com; new tools show up without an extension update.
-- **Read-only** – the tools only read data from your own SEOFuxx account.
+- **Your account only** – the tools work on your own SEOFuxx account; only `run_page_audit` creates data (a new audit).
 
 ### Tools
 
@@ -17,6 +17,7 @@ prioritized on-page recommendations of your latest SEO audits – and fix them r
 |---|---|
 | `list_seo_projects` | Lists the domains/projects in your SEOFuxx account incl. keywords and auto-crawl status. |
 | `get_seo_recommendations` | Returns the latest SEO analysis for a URL: scores and prioritized recommendations with fix code. |
+| `run_page_audit` | Runs a new SEO page audit for a URL and returns scores and recommendations; PageSpeed values follow about a minute later. |
 
 ## Getting started
 
