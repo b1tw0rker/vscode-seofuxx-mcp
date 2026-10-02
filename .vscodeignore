@@ -7,3 +7,5 @@ tsconfig.json
 .gitignore
 ISSUE.md
 package-lock.json
+CLAUDE.md
+.editorconfig
