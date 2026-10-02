@@ -60,3 +60,9 @@ Es gibt aktuell keine Tests und keinen Linter.
 - Nach abgeschlossenen, sinnvoll abgegrenzten Änderungen: `git add` (gezielt, keine Secrets/`dist/`/`*.vsix`), Commit, `git push`.
 - Commit-Messages kurz und im Imperativ; Branch ist `main`.
 - Kein `--force`, kein `--no-verify` und keine History-Umschreibung ohne ausdrückliche Anweisung.
+
+## Arbeitsweise
+
+- So selbstständig wie möglich arbeiten: Aufgabe direkt erledigen, nicht zwischendurch nachfragen oder um Bestätigung bitten.
+- Bei Unklarheiten die naheliegendste Variante wählen, umsetzen und das Ergebnis kurz nennen.
+- Nur bei wirklich riskanten oder unumkehrbaren Aktionen (z. B. Force-Push, Löschen von Daten) vorher rückfragen.
