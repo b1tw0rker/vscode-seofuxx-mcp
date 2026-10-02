@@ -1,0 +1,34 @@
+{
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "com.seofuxx/seo-audit",
+    "title": "SEOFuxx SEO Audit",
+    "description": "Read SEO analyses and prioritized on-page recommendations from your own SEOFuxx account.",
+    "version": "1.0.0",
+    "websiteUrl": "https://www.seofuxx.com",
+    "repository": {
+        "url": "https://github.com/b1tw0rker/seofuxx",
+        "source": "github"
+    },
+    "remotes": [
+        {
+            "type": "streamable-http",
+            "url": "https://www.seofuxx.com/api/v1/mcp",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "description": "Bearer token with your SEOFuxx API key.",
+                    "value": "Bearer {api_key}",
+                    "isRequired": true,
+                    "isSecret": true,
+                    "variables": {
+                        "api_key": {
+                            "description": "SEOFuxx API key (sfx_live_...). Create one at seofuxx.com/account, tab \"API-Keys\".",
+                            "isRequired": true,
+                            "isSecret": true
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

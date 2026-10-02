@@ -9,3 +9,4 @@ ISSUE.md
 package-lock.json
 CLAUDE.md
 .editorconfig
+server.json
