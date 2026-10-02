@@ -53,3 +53,10 @@ Es gibt aktuell keine Tests und keinen Linter.
 
 - `dist/`, `node_modules/` und `*.vsix` sind in `.gitignore`.
 - `README.md` landet im Marketplace – Änderungen dort sind öffentlich sichtbar.
+
+## Git-Workflow
+
+- Claude committet und pusht Änderungen selbstständig, ohne vorher nachzufragen (dauerhafte Freigabe des Users).
+- Nach abgeschlossenen, sinnvoll abgegrenzten Änderungen: `git add` (gezielt, keine Secrets/`dist/`/`*.vsix`), Commit, `git push`.
+- Commit-Messages kurz und im Imperativ; Branch ist `main`.
+- Kein `--force`, kein `--no-verify` und keine History-Umschreibung ohne ausdrückliche Anweisung.
