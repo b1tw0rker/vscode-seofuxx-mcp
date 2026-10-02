@@ -66,3 +66,10 @@ Es gibt aktuell keine Tests und keinen Linter.
 - So selbstständig wie möglich arbeiten: Aufgabe direkt erledigen, nicht zwischendurch nachfragen oder um Bestätigung bitten.
 - Bei Unklarheiten die naheliegendste Variante wählen, umsetzen und das Ergebnis kurz nennen.
 - Nur bei wirklich riskanten oder unumkehrbaren Aktionen (z. B. Force-Push, Löschen von Daten) vorher rückfragen.
+
+## Infrastruktur
+
+- Wir sind selbst DNS-Anbieter und Domain-Provider für `seofuxx.com` (PowerDNS). DNS-Änderungen, z. B. TXT-Records für die MCP-Registry-Verifizierung, können daher direkt erledigt werden.
+- Zugangsdaten (SSH, Web-Oberfläche, PowerDNS-API) liegen in der lokalen `.env` – nur dort lesen, nie in Code, Logs, Commits oder Antworten ausgeben. `.env` ist nicht im Git.
+- Reine Lese-Abfragen sind frei. Schreibende DNS-Änderungen vorher kurz nennen und danach per `dig` prüfen; bestehende Records nicht löschen oder überschreiben, nur gezielt ergänzen.
+- Du kannst diene eigen Claude.md selber selbststänidg ohne nachfragen bearbeiten
