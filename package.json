@@ -2,7 +2,7 @@
   "name": "seofuxx-mcp",
   "displayName": "SEOFuxx MCP – SEO Audit for Copilot",
   "description": "SEO analyses and prioritized on-page recommendations from your SEOFuxx account, right inside GitHub Copilot Chat (MCP server).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "BITWORKER",
   "license": "MIT",
   "icon": "images/seofuxx-256.png",

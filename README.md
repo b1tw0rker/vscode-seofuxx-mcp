@@ -59,6 +59,11 @@ claude mcp add --scope user --transport http seofuxx https://www.seofuxx.com/api
   --header "Authorization: Bearer sfx_live_…"
 ```
 
+The server is also listed in the official [MCP Registry](https://registry.modelcontextprotocol.io) as
+`com.seofuxx/seo-audit`, so registry-aware clients (including the VS Code MCP gallery, search `@mcp seofuxx`) can
+install it and will ask for your API key. Use **either** this extension **or** the gallery entry, not both – the
+extension is recommended because it keeps the key in Secret Storage.
+
 ## Privacy
 
 The extension sends your API key only to the configured SEOFuxx endpoint. It collects no telemetry.
